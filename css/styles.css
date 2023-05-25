@@ -441,7 +441,7 @@ body {
 }
 
 .customer {
-  line-height: 1.11
+  line-height: 1.11;
 }
 
 /* portfolio */
@@ -534,11 +534,58 @@ body {
 .examples .link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+   
+  }
 
 .examples .text {
   color: var(--general-text-color);
 }
+
+.product-thumb {
+  display: block;
+  position: relative;
+}
+
+.product-thumb::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--primty-brand);
+  opacity: 0;
+}
+
+.link:hover .product-thumb::before,
+.link:focus .product-thumb::before {
+  opacity: 1;
+}
+
+
+.product-desc {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 32px;
+  right: 32px;
+
+  /* transform: translate(0, -50%); */
+
+  display: flex;
+
+  color: var(--footer-text-color);
+  font-weight: 400;
+
+  opacity: 0;
+}
+
+.link:hover .product-desc,
+.link:focus .product-desc {
+  opacity: 1 ;
+}
+
 /* footer */
 
 .foot {
@@ -633,7 +680,6 @@ body {
   content: "";
   background-color: var(--CTA);
 }
-
 
 .socmed-item {
   display: flex;

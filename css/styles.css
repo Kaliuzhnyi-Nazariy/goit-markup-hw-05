@@ -534,8 +534,7 @@ body {
 .examples .link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   
-  }
+}
 
 .examples .text {
   color: var(--general-text-color);
@@ -563,7 +562,6 @@ body {
   opacity: 1;
 }
 
-
 .product-desc {
   content: "";
   position: absolute;
@@ -583,7 +581,74 @@ body {
 
 .link:hover .product-desc,
 .link:focus .product-desc {
-  opacity: 1 ;
+  opacity: 1;
+}
+
+/* backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(46, 47, 66, 0.4);
+  opacity: 1;
+}
+
+.backdrop .is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  /* left: 516px;
+  top: 80px; */
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 408px;
+  min-height: 584px;
+
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.cross {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  gap: 8px;
+}
+
+.close-but {
+  content: "";
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  transform: translate(-50%, -505);
+
+  background-color: var(--port-but);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-but:hover,
+.close-but:focus {
+  cursor: pointer;
 }
 
 /* footer */

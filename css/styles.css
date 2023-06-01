@@ -106,7 +106,7 @@ body {
 }
 
 .site-nav > .current-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -447,7 +447,8 @@ body {
   justify-content: center;
   color: #8e8f99;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cust-link:hover,
@@ -621,10 +622,14 @@ body {
 
   background: rgba(46, 47, 66, 0.4);
   opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop .is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -644,6 +649,8 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cross {
@@ -653,6 +660,8 @@ body {
   transform: translate(-50%, -50%);
 
   gap: 8px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-but {
@@ -669,11 +678,22 @@ body {
 
   background-color: var(--port-but);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  padding: 0;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-but:hover,
 .close-but:focus {
-  cursor: pointer;
+  background-color: var(--CTA);
+  border: none;
+  fill: var(--primary-white);
 }
 
 /* footer */
@@ -764,15 +784,13 @@ body {
   background-color: var(--primty-brand);
   border-radius: 50%;
 
-  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socmed-link-sec:hover,
 .socmed-link-sec:focus {
   content: "";
   background-color: var(--CTA);
-
-
 }
 
 .socmed-item {

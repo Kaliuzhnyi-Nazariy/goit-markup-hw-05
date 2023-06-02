@@ -122,8 +122,8 @@ body {
   color: var(--CTA);
 }
 
-.site-nav > .current-link::after {
-  content: "";
+.current-link::after {
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;

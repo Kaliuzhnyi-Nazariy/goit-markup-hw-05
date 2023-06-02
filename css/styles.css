@@ -118,12 +118,12 @@ body {
   margin-right: 0;
 }
 
-.current-link{
+.current-link {
   color: var(--CTA);
 }
 
 .site-nav > .current-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -149,7 +149,6 @@ body {
   text-decoration: none;
   color: currentColor;
 }
-
 
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -226,6 +225,11 @@ body {
   color: var(--primty-brand);
   background-color: var(--team-bg);
   border: 1px solid var(--port-but);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port:hover,
@@ -570,6 +574,8 @@ body {
   list-style: none;
   text-decoration: none;
   display: block;
+
+  transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .examples .link:focus,

@@ -644,7 +644,7 @@ body {
 .link:focus .text-desc{
   opacity: 1;
 
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 /* backdrop */
